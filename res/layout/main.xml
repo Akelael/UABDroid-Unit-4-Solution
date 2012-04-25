@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge" 
+        android:text="@string/activity_3_2"/>
+    
+	<Button android:id="@+id/button_download_service" 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:text="@string/button_download_service"/>
+
+	<TextView
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:textAppearance="?android:attr/textAppearanceLarge" 
+	    android:text="@string/activity_3_3"/>
+	
+	<Button android:id="@+id/button_list_activity" 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:text="@string/button_list_activity"/>
+	
+	<Button android:id="@+id/button_data_service" 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:text="@string/button_data_service"/>
+
+	<TextView
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:textAppearance="?android:attr/textAppearanceLarge" 
+	    android:text="@string/activity_3_4"/>
+	
+	<Button android:id="@+id/button_notification_service" 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:text="@string/button_notification_service"/>
+	
+</LinearLayout>
