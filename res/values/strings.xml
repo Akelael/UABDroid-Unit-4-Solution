@@ -2,7 +2,7 @@
 <resources>
 
 	<!-- General -->
-    <string name="app_name">Unit3Example</string>
+    <string name="app_name">Unit4Example</string>
 	<!-- ******* -->
 
 	<!-- MainActivity -->
@@ -10,9 +10,9 @@
     <string name="button_list_activity">Llista d\'aplicacions</string>
     <string name="button_data_service">Carregar BBDD</string>
     <string name="button_notification_service">Llençar notificacio</string>
-    <string name="activity_3_2">Activitat 3.2</string>
-    <string name="activity_3_3">Activitat 3.3</string>
-    <string name="activity_3_4">Activitat 3.4</string>
+    <string name="activity_4_2">Activitat 4.2</string>
+    <string name="activity_4_3">Activitat 4.3</string>
+    <string name="activity_4_4">Activitat 4.4</string>
     <!-- ************ -->
     
     <!-- Form Layout -->

@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge" 
-        android:text="@string/activity_3_2"/>
+        android:text="@string/activity_4_2"/>
     
 	<Button android:id="@+id/button_download_service" 
 		android:layout_width="wrap_content" 
@@ -20,7 +20,7 @@
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
 	    android:textAppearance="?android:attr/textAppearanceLarge" 
-	    android:text="@string/activity_3_3"/>
+	    android:text="@string/activity_4_3"/>
 	
 	<Button android:id="@+id/button_list_activity" 
 		android:layout_width="wrap_content" 
@@ -36,7 +36,7 @@
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
 	    android:textAppearance="?android:attr/textAppearanceLarge" 
-	    android:text="@string/activity_3_4"/>
+	    android:text="@string/activity_4_4"/>
 	
 	<Button android:id="@+id/button_notification_service" 
 		android:layout_width="wrap_content" 
