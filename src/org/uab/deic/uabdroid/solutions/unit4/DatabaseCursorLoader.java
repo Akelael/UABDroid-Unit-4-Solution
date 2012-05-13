@@ -30,6 +30,7 @@ public class DatabaseCursorLoader extends AsyncTaskLoader<Cursor>
 {
 	private DatabaseAdapter mDatabaseAdapter;
 	private DatabaseReceiver mDatabaseReceiver;
+	private Cursor mCursor;
 	
 	// When constructed, we open the database
 	public DatabaseCursorLoader(Context _context) 
@@ -63,9 +64,15 @@ public class DatabaseCursorLoader extends AsyncTaskLoader<Cursor>
 	@Override
 	public Cursor loadInBackground() 
 	{	
-		Cursor cursor = mDatabaseAdapter.getAllFormRegisters();
+		if ((mCursor != null)&&(!mCursor.isClosed()))
+		{
+			mCursor.close();
+			mCursor = null;
+		}
 		
-		return cursor;
+		mCursor = mDatabaseAdapter.getAllFormRegisters();
+		
+		return mCursor;
 	}
 	
 	// If the loader if reseted, we must do some cleaning :)
@@ -77,6 +84,12 @@ public class DatabaseCursorLoader extends AsyncTaskLoader<Cursor>
 		// Stop the loading, if it's being perfomed
 		onStopLoading();
 
+		if ((mCursor != null)&&(!mCursor.isClosed()))
+		{
+			mCursor.close();
+			mCursor = null;
+		}
+		
 		// Close the database
 		mDatabaseAdapter.close();
 		mDatabaseAdapter = null;

@@ -23,10 +23,10 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.Loader;
+import android.support.v4.widget.SimpleCursorAdapter;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.SimpleCursorAdapter;
 import android.widget.AdapterView.OnItemClickListener;
 
 // This activity now obtains the data for filling the form from
@@ -49,7 +49,8 @@ public class AppListActivity extends FragmentActivity
 													R.layout.results_list_item, 
 													null, 
 													COLUMNS_FROM, 
-													VIEWS_TO);
+													VIEWS_TO,
+													0);
 
 		// Set the listView adapter to the one we have just created
 		ListView listView = (ListView)findViewById(R.id.list_view);
@@ -87,19 +88,14 @@ public class AppListActivity extends FragmentActivity
 		@Override
 		public void onLoadFinished(Loader<Cursor> _loader, Cursor _cursor) 
 		{
-			Cursor oldCursor = null;
-			if ((oldCursor = mCursorAdapter.getCursor())!=null)
-			{
-				oldCursor.close();
-			}
-			mCursorAdapter.changeCursor(_cursor);
+			mCursorAdapter.swapCursor(_cursor);
 		}
 
 		// If the Loader is reseted, we empty the adapter
 		@Override
 		public void onLoaderReset(Loader<Cursor> arg0) 
 		{
-			mCursorAdapter.changeCursor(null);
+			mCursorAdapter.swapCursor(null);
 		}
 	}
 }
